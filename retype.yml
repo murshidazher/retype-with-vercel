@@ -1,6 +1,6 @@
 input: ./
 output: .retype
-url: # Add your website url
+url: https://retype-with-vercel.vercel.app/
 
 branding:
   title: Retype with Vercel
@@ -11,32 +11,28 @@ search:
     - "/"
 
 meta:
-  title: " | :Different - Engineering documentation"
+  title: " | Retype with Vercel"
 
 edit:
-  repo: github.com/DifferentTech/eng-playbook-2022
+  repo: github.com/murshidazher/retype-with-vercel
 
 links:
   - text: Home
     link: /README.md
     icon: home
 
-  - text: Adding a new process entry
-    link: "/doc/add-new-process-entry/"
-    icon: rocket
-
   - text: Issues
-    link: https://github.com/DifferentTech/eng-playbook-2022/issues
+    link: https://github.com/murshidazher/retype-with-vercel/issues
     icon: issue-opened
     target: blank
 
   - text: Discussions
-    link: https://github.com/DifferentTech/eng-playbook-2022/discussions
+    link: https://github.com/murshidazher/retype-with-vercel/discussions
     icon: comment-discussion
     target: blank
 
   - text: GitHub
-    link: https://github.com/DifferentTech/eng-playbook-2022
+    link: https://github.com/murshidazher/retype-with-vercel
     icon: mark-github
     target: blank
 
