@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "git-tag"
+  ],
+  "owner": "murshidazher",
+  "repo": "retype-with-vercel",
+  "name": "murshidazher",
+  "email": "hello@murshidazher.com"
+}
