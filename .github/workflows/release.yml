@@ -54,7 +54,6 @@ jobs:
           fetch-depth: 0
 
       - name: Update the retype yml file
-        uses: actions/checkout@v2
         with:
           ref: ${{ steps.latest-release.outputs.tag }}
         run: |
