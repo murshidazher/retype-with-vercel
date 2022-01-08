@@ -66,9 +66,13 @@ jobs:
           ref: ${{ steps.latest-release.outputs.tag }}
           fetch-depth: 0
 
-      - name: Update the retype yml file
+      - name: Update the retype.yml file
         run: |
           version=$(grep -A2 'branding:' retype.yml | tail -n1); version=${version//*label: /}; echo "$version"; sed -i "s/$version/${{ steps.latest-release.outputs.tag }}/g" retype.yml;
+
+      - name: Update the package.json file
+        run: |
+          sed -i 's/"recording_id": *"[^"]*"/"recording_id": ""/'
 
       - name: setup git config
         run: |
@@ -81,4 +85,5 @@ jobs:
         run: |
           git add retype.yml
           git commit -m ":wrench: chore: bump retype version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
+          git pull --rebase origin main
           git push origin main
