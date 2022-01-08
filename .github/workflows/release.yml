@@ -72,7 +72,7 @@ jobs:
 
       - name: Update the package.json file
         run: |
-          sed -i 's/"recording_id": *"[^"]*"/"recording_id": ""/'
+          version=$(echo "${{ steps.latest-release.outputs.tag }}" | sed 's/v//g'); sed -i 's/"version": *"[^"]*"/"version": "$version"/' package.json
 
       - name: setup git config
         run: |
