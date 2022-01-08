@@ -16,7 +16,9 @@
   "scripts": {
     "watch": "npx retype watch",
     "clean:retype": "rm -rf .retype",
-    "build:retype": "npx retype build"
+    "build:retype": "npx retype build",
+    "release:tag": "auto release --base-branch=main",
+    "release:ship": "auto shipit --base-branch=main"
   },
   "devDependencies": {
     "@auto-it/git-tag": "~10.32.5",
@@ -26,5 +28,8 @@
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "dependencies": {
+    "auto": "~10.32.5"
   }
 }

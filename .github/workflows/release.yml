@@ -25,7 +25,7 @@ jobs:
       - name: Download latest deps and auto
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
+        run: |
           npm install -g auto
           npm i
 
@@ -41,13 +41,13 @@ jobs:
         id: create-label
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          auto release --base-branch=main
+        run: npm run release:tag
 
-      - name: Create release
+      - name: Create release ship
+        id: create-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: auto shipit --base-branch=main
+        run: npm run release:ship
 
   update-and-push-retype:
     runs-on: ubuntu-latest
