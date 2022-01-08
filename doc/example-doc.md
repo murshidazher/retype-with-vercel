@@ -1,5 +1,5 @@
 # An Example Doc
 
-## Sub Heading
+## Heading 2
 
 - Some history
