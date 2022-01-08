@@ -1,2 +1,3 @@
 # retype-with-vercel
-A demonstration of retype with vercel and changelog
+
+A demonstration of [retype](https://github.com/retypeapp/retype) with vercel and changelog

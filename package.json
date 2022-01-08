@@ -1,0 +1,26 @@
+{
+  "name": "retype-with-vercel",
+  "version": "1.0.0",
+  "description": "Demonstration of retype with vercel documentation",
+  "main": "README.md",
+  "files": [
+    "doc",
+    "README.md"
+  ],
+  "scripts": {
+    "watch": "npx retype watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murshidazher/retype-with-vercel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murshidazher/retype-with-vercel/issues"
+  },
+  "homepage": "https://github.com/murshidazher/retype-with-vercel#readme",
+  "devDependencies": {
+    "retypeapp": "1.11.2"
+  }
+}
