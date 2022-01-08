@@ -80,5 +80,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add retype.yml
-          git commit -m ":wrench: chore:Bump retype version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
-          git push origin master
+          git commit -m ":wrench: chore: Bump retype version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
+          git push origin main
