@@ -66,6 +66,32 @@ jobs:
           ref: ${{ steps.latest-release.outputs.tag }}
           fetch-depth: 0
 
+      - name: Get updated version of the Source
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://github.com/murshidazher/retype-with-vercel.git
+          git remote -v
+          git status
+          git pull --rebase origin main
+
+      - name: Update the CHANGELOG file
+        run: |
+          # remove the changelog header and reformat md
+          perl -0777 -i -pe 's/# Changelog\n\n//gs' CHANGELOG.md
+          perl -0777 -i -pe 's/---\nlabel: Changelog\nicon: versions\n---\n//igs' CHANGELOG.md
+          perl -0777 -i -pe 's/####/###/gs' CHANGELOG.md
+          perl -0777 -i -pe 's/# v/## v/gs' CHANGELOG.md
+          # add the file index to the top
+          sed -i '1s/^/---\nlabel: Changelog\nicon: versions\n---\n# Changelog\n\n/' CHANGELOG.md
+
+      - name: Commit CHANGELOG reformat
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add -A
+          git commit -m ":art: style: reformat CHANGELOG.md [skip ci]"
+
       - name: Update the retype.yml file
         run: |
           version=$(grep -A2 'branding:' retype.yml | tail -n1); version=${version//*label: /}; echo "$version"; sed -i "s/$version/${{ steps.latest-release.outputs.tag }}/g" retype.yml;
@@ -79,13 +105,10 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - name: commit
+      - name: commit version bump
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git remote set-url origin https://github.com/murshidazher/retype-with-vercel.git
-          git remote -v
-          git status
           git add -A
           git commit -m ":wrench: chore: bump version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
           git show-ref
