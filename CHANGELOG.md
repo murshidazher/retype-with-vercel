@@ -1,3 +1,15 @@
+# v0.0.11 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :sparkles: feat: add CHANGELOG reformat into workflow ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v0.0.10 (Sat Jan 08 2022)
 
 #### ⚠️ Pushed to `main`
