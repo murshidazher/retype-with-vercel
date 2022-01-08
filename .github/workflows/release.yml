@@ -26,7 +26,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          npm install -g auto
+          npm install -g auto@10.24.1
 
       - name: Check whether a release is due
         id: auto-version
@@ -35,6 +35,13 @@ jobs:
         run: |
           version="$(auto version)"
           echo "::set-output name=version::$version"
+
+      - name: Check release tag
+        id: create-label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          auto create-labels
 
       - name: Create release
         env:

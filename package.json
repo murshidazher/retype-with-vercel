@@ -19,6 +19,7 @@
     "build:retype": "npx retype build"
   },
   "devDependencies": {
+    "@auto-it/git-tag": "~10.32.5",
     "commitizen": "~4.2.4",
     "cz-conventional-changelog": "~3.3.0",
     "retypeapp": "1.11.2"
