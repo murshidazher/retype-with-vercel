@@ -22,11 +22,12 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Download latest auto
+      - name: Download latest deps and auto
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
           npm install -g auto
+          npm i
 
       - name: Check whether a release is due
         id: auto-version
@@ -41,7 +42,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          auto create-labels
+          auto release --base-branch=main
 
       - name: Create release
         env:
