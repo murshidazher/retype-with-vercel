@@ -4,7 +4,7 @@ icon: home
 ---
 # [retype-with-vercel](https://github.com/murshidazher/retype-with-vercel)
 
-[![production-vercel-status](https://github.com/murshidazher/retype-with-vercel/actions/workflows/release.yaml/badge.svg?label=active)](https://github.com/murshidazher/retype-with-vercel/actions/workflows/release.yaml?label=main&style=flat-square)
+[![production-vercel-status](https://github.com/murshidazher/retype-with-vercel/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/murshidazher/retype-with-vercel/actions/workflows/release.yml)
 
 > A demonstration of [retype](https://github.com/retypeapp/retype) with vercel and changelog
 
