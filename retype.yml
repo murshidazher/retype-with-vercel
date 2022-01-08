@@ -1,6 +1,6 @@
 input: ./
 output: .retype
-url: # Add your website url
+url: https://retype-with-vercel.vercel.app/
 
 branding:
   title: Retype with Vercel
