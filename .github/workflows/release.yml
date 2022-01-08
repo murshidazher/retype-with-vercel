@@ -83,8 +83,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git remote add origin https://github.com/murshidazher/retype-with-vercel.git
+          git remote -v
           git status
-          git add .
+          git add -A
           git commit -m ":wrench: chore: bump version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
           git pull --rebase origin main
           git push origin main
