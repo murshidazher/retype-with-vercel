@@ -1,10 +1,13 @@
+# .github/workflows/release.yml
 name: Auto-release on PR merge
 
+# the event that will trigger the action
 on:
-  workflow_dispatch:
-  push:
-    branches: [main]
+  pull_request:
+    branches: [master]
+    types: [closed]
 
+# what the action will do
 jobs:
   auto-release:
     runs-on: ubuntu-latest
