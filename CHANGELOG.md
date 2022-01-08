@@ -1,3 +1,16 @@
+# v0.0.2 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :sparkles: feat: add release yml ([@murshidazher](https://github.com/murshidazher))
+- :bug: fix: add release yml ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v0.0.1 (Sat Jan 08 2022)
 
 #### ⚠️ Pushed to `main`
