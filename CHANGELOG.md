@@ -1,3 +1,16 @@
+# v0.0.12 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :books: docs: update action bot id decs ([@murshidazher](https://github.com/murshidazher))
+- :package: build: update workflow github-bot email ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v0.0.11 (Sat Jan 08 2022)
 
 #### ⚠️ Pushed to `main`
