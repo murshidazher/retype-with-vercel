@@ -1,6 +1,6 @@
 {
   "name": "retype-with-vercel",
-  "version": "$version",
+  "version": "0.0.8",
   "description": "Demonstration of retype with vercel documentation",
   "main": "README.md",
   "files": [
