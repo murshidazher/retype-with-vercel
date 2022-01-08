@@ -54,8 +54,6 @@ jobs:
           fetch-depth: 0
 
       - name: Update the retype yml file
-        with:
-          ref: ${{ steps.latest-release.outputs.tag }}
         run: |
           version=$(grep -A2 'branding:' retype.yml | tail -n1); version=${version//*label: /}; echo "$version"; sed -i "s/$version/${{ steps.latest-release.outputs.tag }}/g" retype.yml;
 
