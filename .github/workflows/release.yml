@@ -18,20 +18,23 @@ jobs:
           fetch-depth: 0
 
       - name: Download latest auto
-        uses: terradatum/auto-action@master
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          auto_download_url="$(curl -fsSL https://api.github.com/repos/intuit/auto/releases/latest | jq -r '.assets[] | select(.name == "auto-linux.gz") | .browser_download_url')"
+          wget -O- "$auto_download_url" | gunzip > ~/auto
+          chmod a+x ~/auto
 
       - name: Check whether a release is due
         id: auto-version
-        run: |
-          version="$(auto version)"
-          echo "::set-output name=version::$version"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version="$(~/auto version)"
+          echo "::set-output name=version::$version"
 
       - name: Create release
-        run: auto shipit
+        run: ~/auto shipit
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
