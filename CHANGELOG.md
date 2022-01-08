@@ -1,3 +1,15 @@
+# v0.0.10 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :sparkles: feat: udpdate README and CHANGELOG ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 ---
 label: Changelog
 icon: versions
