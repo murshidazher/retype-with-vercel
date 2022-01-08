@@ -83,7 +83,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git remote add origin https://github.com/murshidazher/retype-with-vercel.git
+          git remote set-url origin https://github.com/murshidazher/retype-with-vercel.git
           git remote -v
           git status
           git add -A
