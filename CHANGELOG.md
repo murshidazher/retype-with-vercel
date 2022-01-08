@@ -1,3 +1,15 @@
+# v0.0.9 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :bug: fix: remove retype workflow ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v0.0.8 (Sat Jan 08 2022)
 
 #### ⚠️ Pushed to `main`
