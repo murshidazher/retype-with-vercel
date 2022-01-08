@@ -88,5 +88,6 @@ jobs:
           git status
           git add -A
           git commit -m ":wrench: chore: bump version to ${{ steps.latest-release.outputs.tag }} [skip ci]"
+          git show-ref
           git pull --rebase origin main
-          git push origin main
+          git push origin HEAD:main
