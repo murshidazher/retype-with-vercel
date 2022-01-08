@@ -8,7 +8,9 @@
     "README.md"
   ],
   "scripts": {
-    "watch": "npx retype watch"
+    "watch": "npx retype watch",
+    "clean:retype": "rm -rf .retype",
+    "build:retype": "npx retype build"
   },
   "repository": {
     "type": "git",
