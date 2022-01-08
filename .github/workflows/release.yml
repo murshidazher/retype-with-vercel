@@ -37,9 +37,9 @@ jobs:
           echo "::set-output name=version::$version"
 
       - name: Create release
-        run: auto shipit
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: auto shipit --base-branch=main
 
   update-and-push-retype:
     runs-on: ubuntu-latest

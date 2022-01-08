@@ -7,22 +7,23 @@
     "doc",
     "README.md"
   ],
+  "homepage": "https://github.com/murshidazher/retype-with-vercel#readme",
+  "author": "Murshid Azher <hello@murshidazher.com> (https://murshidazher.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murshidazher/retype-with-vercel.git"
+  },
   "scripts": {
     "watch": "npx retype watch",
     "clean:retype": "rm -rf .retype",
     "build:retype": "npx retype build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/murshidazher/retype-with-vercel.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/murshidazher/retype-with-vercel/issues"
-  },
-  "homepage": "https://github.com/murshidazher/retype-with-vercel#readme",
   "devDependencies": {
+    "commitizen": "~4.2.4",
+    "cz-conventional-changelog": "~3.3.0",
     "retypeapp": "1.11.2"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
