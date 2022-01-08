@@ -37,11 +37,11 @@ jobs:
           version="$(auto version)"
           echo "::set-output name=version::$version"
 
-      - name: Check release tag
-        id: create-label
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release:tag
+      # - name: Check release tag
+      #   id: create-label
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: npm run release:tag
 
       - name: Create release ship
         id: create-release
