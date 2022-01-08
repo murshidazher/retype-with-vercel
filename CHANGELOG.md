@@ -1,3 +1,15 @@
+# v0.0.4 (Sat Jan 08 2022)
+
+#### ⚠️ Pushed to `main`
+
+- :bug: fix: update release.yml ([@murshidazher](https://github.com/murshidazher))
+
+#### Authors: 1
+
+- Murshid Azher ([@murshidazher](https://github.com/murshidazher))
+
+---
+
 # v0.0.3 (Sat Jan 08 2022)
 
 #### ⚠️ Pushed to `main`
