@@ -4,7 +4,7 @@ name: Auto-release on PR merge
 # the event that will trigger the action
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
     types: [closed]
 
 # what the action will do
